@@ -1,0 +1,29 @@
+{
+  "name": "mvc-tech-blog",
+  "version": "1.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "author": "",
+  "description": "",
+  "homepage": "https://github.com/fuuko08/MVC-Tech-Blog#readme",
+  "keywords": [],
+  "license": "ISC",
+  "main": "server.js",
+  "packages": {},
+  "bugs": {
+    "url": "https://github.com/fuuko08/MVC-Tech-Blog/issues"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuuko08/MVC-Tech-Blog.git"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon server.js"
+  }
+}
