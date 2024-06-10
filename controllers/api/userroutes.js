@@ -47,7 +47,7 @@ router.post('/login', async (req, res) => {
 });
 
 // logout user ('/api/user/logout')
-router.post('/logout', async (req, res) => {
+router.post('/logout',withAuth, async (req, res) => {
     try {
         if (req.session.loggedIn) {
             const dbUserData = await req.session.destroy(() => {

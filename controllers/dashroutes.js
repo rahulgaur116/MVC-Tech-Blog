@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 const sequelize = require('../config/config');
 
 // User's all posts ('/dashboard')
-router.get('/', (req, res) => {
+router.get('/',withAuth, (req, res) => {
     Post.findAll({
       where: {
         userId: req.session.userId,
@@ -37,7 +37,7 @@ router.get('/', (req, res) => {
 });
 
 // Get one post to edit ('dashboard/edit/:id')
-router.get('/edit/:id', (req, res) => {
+router.get('/edit/:id',withAuth, (req, res) => {
   Post.findOne({
     where: {
       id: req.params.id,
@@ -73,7 +73,7 @@ router.get('/edit/:id', (req, res) => {
 });
 
 //  Get new post ('/dashboard/new)
-router.get('/new', (req, res) => {
+router.get('/new',withAuth, (req, res) => {
     res.render('new-post', { username: req.session.username });
 });
 
