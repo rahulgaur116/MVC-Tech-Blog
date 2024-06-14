@@ -1,16 +1,16 @@
 
 <div class="card">
     <h2 class="card-header">Edit Your Post</h2>
-    <form class="card-body edit-form">
+    <form id = "edit-form" class="card-body edit-form">
 
       <div class="form-group">
         <label class="form-label">Title:</label>
-        <input type="text" class="form-input" name="post-title" value="{{post.title}}"/>
+        <input id = "post-title"type="text" class="form-input" name="post-title" value="{{post.title}}"/>
       </div>
 
       <div class="form-group">
         <label class="form-label">Content:</label>
-        <textarea class="form-textarea form-input" name="post-content">{{post.content}}</textarea>
+        <textarea id = "post-content" class="form-textarea form-input" name="post-content">{{post.content}}</textarea>
       </div>
 
       <div class="form-group">
@@ -20,4 +20,4 @@
     </form>
    
 </div>
-<script src="./javascript/edit.js"></script>
+<script src="/javascript/comment.js"></script>
